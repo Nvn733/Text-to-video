@@ -267,7 +267,7 @@ async def restart_handler(_, m):
 @bot.on_message(filters.command("drm")) # & filters.private)
 async def account_login(bot: Client, m: Message):
     #if m.chat.type == "private":
-    user_id = str(m.from_user.7068000043)
+    user_id = str(m.from_user.id)
     subscription_data = read_subscription_data()
     if not any(user[3] == user_id for user in subscription_data):
         await m.reply_text("❌ You are not a premium user. Please upgrade your subscription! 💎 Mtlb ki lodu subscription le le")
